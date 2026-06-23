@@ -1,0 +1,214 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 Courses In 1</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#0f172a;
+color:white;
+text-align:center;
+}
+
+header{
+padding:30px;
+}
+
+.cover{
+width:90%;
+max-width:900px;
+border-radius:20px;
+box-shadow:0 0 25px cyan;
+}
+
+h1{
+font-size:40px;
+color:cyan;
+}
+
+.subtitle{
+font-size:20px;
+color:#ddd;
+margin-bottom:30px;
+}
+
+.course-btn{
+display:block;
+width:300px;
+margin:15px auto;
+padding:15px;
+font-size:20px;
+border:none;
+border-radius:12px;
+background:linear-gradient(45deg,#00c6ff,#0072ff);
+color:white;
+cursor:pointer;
+}
+
+.course-btn:hover{
+transform:scale(1.05);
+}
+
+.page{
+display:none;
+padding:20px;
+}
+
+textarea{
+width:90%;
+max-width:600px;
+height:120px;
+padding:10px;
+border-radius:10px;
+}
+
+.submit{
+margin-top:15px;
+padding:12px 25px;
+font-size:18px;
+border:none;
+border-radius:10px;
+background:#00ff88;
+cursor:pointer;
+}
+
+.back{
+margin-top:10px;
+padding:10px 20px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div id="home">
+
+<header>
+
+<!-- Apni image upload karke naam cover.jpg rakho -->
+<img src="cover.jpg" class="cover">
+
+<h1>5 Courses In 1</h1>
+
+<div class="subtitle">
+Website Development + Video Editing + Arduino +
+AI Song Videos + AI Story Videos + YouTube Growth
+</div>
+
+<button class="course-btn" onclick="showPage('arduino')">
+🤖 Arduino Projects
+</button>
+
+<button class="course-btn" onclick="showPage('website')">
+🌐 Website Development
+</button>
+
+<button class="course-btn" onclick="showPage('editing')">
+🎬 Video Editing
+</button>
+
+<button class="course-btn" onclick="showPage('song')">
+🎵 AI Song Videos
+</button>
+
+<button class="course-btn" onclick="showPage('story')">
+📖 AI Story Videos
+</button>
+
+<button class="course-btn" onclick="showPage('youtube')">
+📈 YouTube Growth
+</button>
+
+</header>
+
+</div>
+
+<!-- Arduino -->
+<div class="page" id="arduino">
+<h2>Arduino Project Request</h2>
+<p>Kaunsa Arduino project chahiye?</p>
+<textarea placeholder="Project details likho..."></textarea><br>
+<button class="submit" onclick="goDiscord()">Submit & Join Discord</button><br>
+<button class="back" onclick="goHome()">Back</button>
+</div>
+
+<!-- Website -->
+<div class="page" id="website">
+<h2>Website Development</h2>
+<p>Kaisi website chahiye?</p>
+<textarea placeholder="Website details likho..."></textarea><br>
+<button class="submit" onclick="goDiscord()">Submit & Join Discord</button><br>
+<button class="back" onclick="goHome()">Back</button>
+</div>
+
+<!-- Editing -->
+<div class="page" id="editing">
+<h2>Video Editing</h2>
+<p>Kis type ki editing chahiye?</p>
+<textarea placeholder="Editing details..."></textarea><br>
+<button class="submit" onclick="goDiscord()">Submit & Join Discord</button><br>
+<button class="back" onclick="goHome()">Back</button>
+</div>
+
+<!-- Song -->
+<div class="page" id="song">
+<h2>AI Song Video</h2>
+<p>Kaisa AI song video chahiye?</p>
+<textarea placeholder="Song details..."></textarea><br>
+<button class="submit" onclick="goDiscord()">Submit & Join Discord</button><br>
+<button class="back" onclick="goHome()">Back</button>
+</div>
+
+<!-- Story -->
+<div class="page" id="story">
+<h2>AI Story Video</h2>
+<p>Kaisi story video chahiye?</p>
+<textarea placeholder="Story details..."></textarea><br>
+<button class="submit" onclick="goDiscord()">Submit & Join Discord</button><br>
+<button class="back" onclick="goHome()">Back</button>
+</div>
+
+<!-- YouTube -->
+<div class="page" id="youtube">
+<h2>YouTube Growth</h2>
+<p>Channel ke baare me batao.</p>
+<textarea placeholder="Subscribers aur niche details..."></textarea><br>
+<button class="submit" onclick="goDiscord()">Submit & Join Discord</button><br>
+<button class="back" onclick="goHome()">Back</button>
+</div>
+
+<script>
+
+function showPage(id){
+document.getElementById("home").style.display="none";
+
+let pages=document.querySelectorAll(".page");
+pages.forEach(p=>p.style.display="none");
+
+document.getElementById(id).style.display="block";
+}
+
+function goHome(){
+document.getElementById("home").style.display="block";
+
+let pages=document.querySelectorAll(".page");
+pages.forEach(p=>p.style.display="none");
+}
+
+function goDiscord(){
+alert("Ye hamara Discord hai. Join karo aur apni requirement send karo.");
+window.open("https://discord.gg/invite/j3P5aECh","_blank");
+}
+
+</script>
+
+</body>
+</html>
+```
